@@ -1,15 +1,29 @@
 #pragma once
 #include "DxLib.h"
+#include "LoadThread.hpp"
 
 
 
 class Game
 {
+private:
+	LoadThread* mp_loadThread;
+	bool m_isLoadNow;
+
+
+	// í≤êÆÇÕÇ±Ç±à»â∫Ç©ÇÁòMÇÍÇŒÇ¢Ç¢
+
+
 public:
 	Game();
 	~Game();
 
 
 	void RunLoop();
+	void GameUpdate();
+
+
+	// í≤êÆÇÕÇ±Ç±à»â∫Ç©ÇÁòMÇÍÇŒÇ¢Ç¢
+
 };
 
